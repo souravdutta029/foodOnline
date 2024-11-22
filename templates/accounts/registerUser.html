@@ -104,6 +104,8 @@
                             {% endfor %} 
                           {% endif %} 
                         {% endfor %}
+
+                        <li style="color: red">{{form.non_field_errors}}</li>
                       </ul>
                       <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -117,6 +119,13 @@
                               />
                             </div>
                           </div>
+                        </div>
+                      </div>
+                      <!--- Django messages --->
+                      <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <!-- Load message -->
+                          {% include 'includes/alerts.html' %}
                         </div>
                       </div>
                     </li>
