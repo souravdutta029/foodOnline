@@ -21,6 +21,8 @@
                         <div class="user-holder">
                             <h5 class="text-uppercase">Build your food menu</h5>
                             <hr>
+                            <button class="btn btn-secondary" onclick="history.back()"><i class="fa fa-angle-left ml-2"
+                                    aria-hidden="true"></i>&nbsp;Back</button> <br><br>
                             <h6>Modify Category</h6>
                             <!-- render form -->
                             <form action="{% url 'edit_category' category.id %}" method="POST">
@@ -54,6 +56,10 @@
 
                                 <button type="submit" class="btn btn-info"><i class="fa fa-check m-1"
                                         aria-hidden="true"></i>Update</button>
+
+                                <a href="{% url 'delete_category' category.id %}"
+                                    onclick="return confirm('Are you sure you want to delete this category?')"
+                                    class="btn btn-danger"><i class="fa fa-trash m-1" aria-hidden="true"></i>Delete</a>
                             </form>
                         </div>
                     </div>
