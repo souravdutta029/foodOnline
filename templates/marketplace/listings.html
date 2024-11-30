@@ -55,6 +55,16 @@
                                                     {{ vendor.user_profile.address }}
                                                 </small>
                                                 {% endif %}
+
+                                                {% if source_location %}
+                                                <br>
+                                                <span>
+                                                    <small>
+                                                        <b class="text-danger">{{ vendor.kms }}kms</b>
+                                                        away from {{ source_location }}
+                                                    </small>
+                                                </span>
+                                                {% endif %}
                                             </span>
                                         </div>
                                         <div class="list-option">
