@@ -15,4 +15,10 @@ urlpatterns = [
     path('cart/', marketplace_views.cart, name='cart'),
     # Search
     path('search/', marketplace_views.search, name='search'),
+    # checkout
+    path('checkout/', marketplace_views.checkout, name='checkout'),
+    # Orders
+    path('orders/', include('orders.urls')),
+    
+    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,7 @@
+{% autoescape off %}
+Hi, {{ order.name }},
+
+Thank You for ordering with us. Your order has been successfully placed. --foodOnline
+Your order number = {{ order.order_number }}
+Transaction Id = {{ order.payment.transaction_id }}
+{% endautoescape %}
