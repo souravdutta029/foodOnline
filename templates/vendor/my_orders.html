@@ -9,13 +9,13 @@
 <!-- Main Section Start -->
 <div class="main-section">
     <!-- cover section -->
-    {% include 'customers/cover.html' %}
+    {% include 'includes/cover.html' %}
     <div class="page-section account-header buyer-logged-in">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                     <!--- Load the sidebar -->
-                    {% include 'includes/c_sidebar.html' %}
+                    {% include 'includes/v_sidebar.html' %}
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <div class="user-dashboard loader-holder">
@@ -43,16 +43,16 @@
                                                         <td>
                                                             <b>
                                                                 <a class="text-info"
-                                                                    href="{% url 'customer_order_details' order.order_number %}">
+                                                                    href="{% url 'vendor_order_detail' order.order_number %}">
                                                                     {{ order.order_number }}
                                                                 </a>
                                                             </b>
                                                         </td>
                                                         <td>{{ order.name }}</td>
-                                                        <td>₹ {{ order.total }}</td>
+                                                        <td>₹ {{ order.get_total_by_vendor.grand_total }}</td>
                                                         <td>{{ order.status }}</td>
                                                         <td>{{ order.created_at }}</td>
-                                                        <td><a href="{% url 'customer_order_details' order.order_number %}"
+                                                        <td><a href="{% url 'vendor_order_detail' order.order_number %}"
                                                                 class="btn btn-outline-info">Details</a></td>
                                                     </tr>
                                                     {% endfor %}

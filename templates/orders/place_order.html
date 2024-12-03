@@ -8,7 +8,7 @@
     <div class="page-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 col-md-7 col-sm-8 col-xs-12">
+                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
                     <div class="tabs-holder horizontal">
                         <ul class="stickynav-tabs nav nav-tabs">
                             <li class="active"><a data-toggle="tab" href="#home"><i
@@ -42,7 +42,7 @@
                 </div>
 
                 <!-- Your Order section -->
-                <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
+                <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
                     <div class="tabs-holder horizontal">
                         <ul class="stickynav-tabs nav nav-tabs">
                             <li class="active"><a data-toggle="tab" href="#home"><i
@@ -58,9 +58,9 @@
                                                 <tr>
                                                     <td><img src="{{ item.fooditem.image.url }}" alt="Food Image"
                                                             width="40"></td>
-                                                    <td><b>{{ item.fooditem.food_title }}</b></td>
+                                                    <td><b>{{ item.fooditem.food_title | truncatechars:20 }}</b></td>
                                                     <td><b>{{ item.quantity }}</b></td>
-                                                    <td>Rs {{ item.fooditem.price }}</td>
+                                                    <td>₹ {{ item.fooditem.price }}</td>
                                                 </tr>
                                                 {% endfor %}
                                             </tbody>
