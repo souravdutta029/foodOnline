@@ -166,4 +166,8 @@ GDAL_LIBRARY_PATH = os.path.join(BASE_DIR, 'env', 'Lib', 'site-packages', 'osgeo
 PAYPAL_CLIENT_ID = config('PAYPAL_CLIENT_ID')
 # PAYPAL_SECRET_KEY = config('PAYPAL_SECRET_KEY')
 
+# RazorPay configuration
+RZP_KEY_ID = config('RZP_KEY_ID')
+RZP_KEY_SECRET = config('RZP_KEY_SECRET')
+
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
